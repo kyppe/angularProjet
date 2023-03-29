@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Rounded Chair</h3>
+            <h6 class="card-subtitle">globe type chair for rest</h6>
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <div class="white-box text-center"><img [src]=voiture.img class="img-responsive"></div>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-6">
+                    <h4 class="box-title mt-5">{{voiture.marque}}</h4>
+                    <p>{{voiture.description}}</p>
+                    <h2 class="mt-5">
+                        {{voiture.prix}} dt
+                    </h2>
+
+                    <button (click)="buy()" class="btn btn-primary btn-rounded">Buy Now</button>
+                    <h3 class="box-title mt-5">{{voiture.type}}</h3>
+                    <p>est de coleur {{voiture.color}}</p>
+          
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

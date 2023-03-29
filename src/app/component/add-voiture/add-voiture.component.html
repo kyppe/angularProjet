@@ -1,0 +1,85 @@
+<app-nav></app-nav>
+<div class="c1">
+  <div class="form-body">
+    <div class="row">
+      <div class="form-holder">
+        <div class="form-content">
+          <div class="form-items">
+            <h3>Ajouter une voiture</h3>
+            <p>tous les donneé sont nécessaire</p>
+            <form [formGroup]="formAjouter" class="requires-validation" novalidate>
+              <div class="col-md-12">
+                <input
+                  class="form-control"
+                  type="text"
+                  formControlName="type"
+                  placeholder="type"
+                  required
+                />
+              </div>
+
+              <div class="col-md-12">
+                <input
+                  class="form-control"
+                  type="text"
+                  formControlName="prix"
+                  placeholder="prix"
+                  required
+                />
+              </div>
+              <div class="col-md-12">
+                <input
+                  class="form-control"
+                  type="text"
+                  formControlName="color"
+                  placeholder="color"
+                  required
+                />
+              </div>
+
+              <div class="col-md-12">
+                <select formControlName="marque" class="form-select mt-3" required>
+                  <option selected disabled value="">Mercedes</option>
+                  <option class="c2" value="Toyota">Toyota</option>
+                  <option value="Mitsubishi">Mitsubishi</option>
+                  <option value="Nissan">Nissan</option>
+                  <option value="Honda">Honda</option>
+                  <option value="Suzuki">Suzuki</option>
+                </select>
+           
+              </div>
+              
+
+              <div class="col-md-12">
+                <input
+                  class="form-control"
+                  type="text"
+                  formControlName="img"
+                  placeholder="Le lien de l'image."
+                  required
+                />
+            
+              </div>
+              <p>description</p>
+              <div class="col-md-12">
+                <textarea  class="form-control"
+                type="text"
+                formControlName="description"
+                placeholder="description"
+                required>
+                 
+                </textarea>
+              </div>
+
+              <div class="form-button mt-3">
+                <button (click)="ajout()" id="submit" type="submit" class="btn btn-primary">
+                  Ajouter
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

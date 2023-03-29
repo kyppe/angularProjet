@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+  <!-- Navbar -->
+<div class="container-lg">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"><h2>Employee <b>Details</b></h2></div>
+                    <div class="col-sm-4">
+                        <button type="button" routerLink="/addVoiture" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>type</th>
+                        
+                        <th>color</th>
+                        <th>marque</th>
+                        <th>prix</th>
+                        <th>statut</th>
+                        
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let v of vendeur.voiture">
+                        <td>{{v.type}}</td>
+                        <td>{{v.color}}</td>
+                        <td>{{v.marque}}</td>
+                        <td>{{v.prix}}</td>
+                        <td>{{v.statut}}</td>
+                        <td>
+                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="edit" title="Edit" (click)=" edite(v.id)"  data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" (click)="deleteVoiture(v.id)" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                        
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>     

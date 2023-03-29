@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+<div class="container bootstrap snippets bootdey">
+    <h1 class="text-primary">Edit Profile {{vendeur.role}}</h1>
+      <hr>
+	<div class="row">
+
+      
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        
+        
+        <form [formGroup]="formProfile" class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Nom:</label>
+            <div class="col-lg-8">
+              <input class="form-control" formControlName="nom" type="text" value="dey-dey">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Prenom:</label>
+            <div class="col-lg-8">
+              <input class="form-control" formControlName="Prenom" type="text" value="bootdey">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">username:</label>
+            <div class="col-lg-8">
+              <input class="form-control" formControlName="username" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Password</label>
+            <div class="col-lg-8">
+              <input class="form-control" formControlName="Password" type="password" value="janesemail@gmail.com">
+            </div>
+          </div>
+       
+        </form>
+        <button (click)="modif()"  id="submit" type="submit" class="btn btn-primary">
+            save 
+          </button>
+      </div>
+  </div>
+</div>
+<hr>
