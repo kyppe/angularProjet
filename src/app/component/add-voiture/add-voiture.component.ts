@@ -34,8 +34,11 @@ export class AddVoitureComponent implements OnInit {
     
     let vendeur:Vendeur=this.user 
     this.service.getVendeurById(vendeur.id).subscribe(data => {
+
       vendeur=data
+      this.formAjouter.value['img']="assets/"+this.formAjouter.value["marque"]+".jpg"
     let voiture:Voiture=this.formAjouter.value
+
     console.log(vendeur.voiture)
    vendeur.voiture.push(voiture)
    console.log(vendeur.voiture)

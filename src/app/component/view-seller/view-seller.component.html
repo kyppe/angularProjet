@@ -11,6 +11,8 @@
                     </div>
                 </div>
             </div>
+            achter <input name="ach" value="encour" [(ngModel)]="x" (click)="filter()" type="radio">
+            encour <input name="ach" value="achter" [(ngModel)]="x" (click)="filter()" type="radio">
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -25,7 +27,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let v of vendeur.voiture">
+                    <tr *ngFor="let v of vointure">
                         <td>{{v.type}}</td>
                         <td>{{v.color}}</td>
                         <td>{{v.marque}}</td>

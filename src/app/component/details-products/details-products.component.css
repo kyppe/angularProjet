@@ -2,6 +2,11 @@ body{
     background-color: #edf1f5;
     margin-top:20px;
 }
+img
+{
+    height: 400;
+    width: 400px;
+}
 .card {
     margin-bottom: 30px;
 }

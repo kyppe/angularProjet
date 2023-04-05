@@ -18,8 +18,10 @@ export class ShoppingComponent implements OnInit {
   user:any
   ngOnInit(): void {
     this.serviceVoiture.getAll().subscribe((data)=> {console.log(data)
+    
     this.voitures=data
-    })
+    this.voitures=this.voitures.filter(e => e.statut=="encour")
+  })
     this.user = JSON.parse(localStorage.getItem('user') || '[]');
 
     this.utilisateur=this.user 
@@ -34,5 +36,10 @@ export class ShoppingComponent implements OnInit {
     
     this.router.navigate(['/detailsProducts',voiture.id])
     
+  }
+  deconnexion()
+  {
+    localStorage.setItem('user', JSON.stringify("null"));
+    this.router.navigate(['/login']);
   }
 }

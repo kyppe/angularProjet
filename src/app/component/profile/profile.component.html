@@ -1,6 +1,12 @@
 <app-nav></app-nav>
+
 <div class="container bootstrap snippets bootdey">
+  <div *ngIf="vendeur">
     <h1 class="text-primary">Edit Profile {{vendeur.role}}</h1>
+  </div>
+  <div *ngIf="utilisateur">
+    <h1 class="text-primary">Edit Profile {{utilisateur.role}}</h1>
+  </div>
       <hr>
 	<div class="row">
 

@@ -30,12 +30,13 @@ export class DetailsProductsComponent implements OnInit {
       
       console.log(data)
       this.utilisateur=data
-      
-      let vente:Vente = new Vente (0,this.voiture,this.utilisateur.id)
+      this.voiture.statut="acheter"
+      let vente:Vente = new Vente (0,this.voiture,new Date())
       this.utilisateur=data
       this.utilisateur.vente.push(vente)
       this.serviceUtilisateur.modifUtilisateur(this.utilisateur).subscribe(data => console.log(data))
 
       })
   }
+
 }

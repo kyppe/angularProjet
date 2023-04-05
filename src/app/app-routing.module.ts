@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddVoitureComponent } from './component/add-voiture/add-voiture.component';
+import { CartComponent } from './component/cart/cart.component';
 import { DetailsProductsComponent } from './component/details-products/details-products.component';
 import { EditVoitureComponent } from './component/edit-voiture/edit-voiture.component';
 import { LoginComponent } from './component/login/login.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path : 'EditVoiture/:id', title: 'EditVoiture', component: EditVoitureComponent },
   {path : 'detailsProducts/:id', title: 'detailsProducts', component: DetailsProductsComponent },
   {path : 'profile', title: 'profile', component: ProfileComponent },
+  {path : 'cart', title: 'cart', component: CartComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 

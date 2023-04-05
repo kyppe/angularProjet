@@ -14,6 +14,7 @@ import { EditVoitureComponent } from './component/edit-voiture/edit-voiture.comp
 import { ProfileComponent } from './component/profile/profile.component';
 import { NavComponent } from './component/nav/nav.component';
 import { DetailsProductsComponent } from './component/details-products/details-products.component';
+import { CartComponent } from './component/cart/cart.component';
 
 
 
@@ -29,6 +30,7 @@ import { DetailsProductsComponent } from './component/details-products/details-p
     ProfileComponent,
     NavComponent,
     DetailsProductsComponent,
+    CartComponent,
  
    
   ],
